@@ -1,0 +1,76 @@
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
+\begin{figure}[!h]
+\begin{small}
+\begin{verbatim}
+comet init
+comet ll [CLUSTERID] [--format=FORMAT]
+comet cluster [CLUSTERID][--format=FORMAT]
+comet computeset [COMPUTESETID]
+                 [--allocation=ALLOCATION]
+                 [--cluster=CLUSTERID]
+                 [--state=COMPUTESESTATE]
+comet start CLUSTERID 
+            [--count=NUMNODES]
+            [COMPUTENODEIDS]
+            [--allocation=ALLOCATION]
+            [--walltime=WALLTIME]
+comet terminate COMPUTESETID
+comet power (on|off|reboot|reset|shutdown) 
+            CLUSTERID [NODESPARAM]
+comet console CLUSTERID [COMPUTENODEID]
+comet iso list
+comet iso upload [--isoname=ISONAME] PATHISOFILE
+comet iso attach ISONAME CLUSTERID [COMPUTENODEIDS]
+comet iso detach CLUSTERID [COMPUTENODEIDS]
+comet node rename CLUSTERID OLDNAME NEWNAME
+
+Options:
+  --format=FORMAT         Format is either table, json, 
+                          yaml, csv, rest [default: table]
+  --count=NUMNODES        Number of nodes to be powered on. 
+                          When this option is used, the 
+                          Comet system will find a NUMNODES 
+                          number of arbitrary nodes that
+                          are available to boot as a 
+                          computeset
+  --allocation=ALLOCATION Alocation to charge 
+  --walltime=WALLTIME     Walltime requested for node(s).
+                          An integer followed by a unit 
+                          (m,h,d,w, for minute, hour, day)
+                          E.g., 3h, 2d
+  --isoname=ISONAME       Name of iso image 
+  --state=COMPUTESESTATE  List computeset with the given 
+                          state. The state could be
+                          submitted, running, completed
+Arguments:
+  CLUSTERID       The assigned name of a cluster, e.g. vc1
+  COMPUTESETID    An integer identifier assigned to a 
+                  computeset
+  COMPUTENODEID   A compute node name, e.g., vm-vc1-0
+                  If not provided, the requested action
+                  will be taken on the frontend node of 
+                  the specified cluster
+  COMPUTENODEIDS  A set of compute node names in hostlist 
+                  format, e.g., vm-vc1-[0-3]
+                  If not provided, the requested
+                  action will be taken on the frontend 
+                  node of the specified cluster
+  NODESPARAM      Specifying the node/nodes/computeset to
+                  act on. In case of integer, will
+                  be intepreted as a computesetid; in case 
+                  of a hostlist format,
+                  e.g., vm-vc1-[0-3], a group of nodes; 
+                  or a single host is also acceptable,
+                  e.g., vm-vc1-0
+  ISONAME         Name of an iso image at remote server
+  PATHISOFILE     The full path to the iso image file to 
+                  be uploaded
+\end{verbatim}
+\end{small}
+\caption{Cloudmesh Comet CLI Manual Page}\label{F:man}
+\end{figure}
+

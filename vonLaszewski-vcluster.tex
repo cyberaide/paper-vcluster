@@ -1,0 +1,210 @@
+\documentclass[10pt, conference, compsocconf]{IEEEtran}
+
+\hyphenation{data-bases}
+\newcommand{\Comet}{{\em Comet\/}}
+
+\newcommand{\TITLE}{Virtual Cluster management for Heterogeneous Cloud Platforms}
+\newcommand{\AUTHOR}{Gregor von Laszewski, Fugang Wang, Badi Abduhl Wahid, Hyungro Lee}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LATEX DEFINITIONS 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{float}
+\usepackage{comment}
+\usepackage{hyperref} 
+\usepackage{array} 
+\usepackage{graphicx} 
+\usepackage{booktabs} 
+\usepackage{pifont} 
+\usepackage{todonotes} 
+\usepackage{rotating} 
+\usepackage{color} 
+\usepackage{caption}
+\captionsetup{font={scriptsize}}
+
+\newcommand*\rot{\rotatebox{90}} 
+ 
+\newcommand{\FILE}[1]{\todo[color=green!40]{#1}} 
+ 
+
+%
+% more floats on one page
+%
+\renewcommand{\topfraction}{.85}
+\renewcommand{\bottomfraction}{.7}
+\renewcommand{\textfraction}{.15}
+\renewcommand{\floatpagefraction}{.66}
+\renewcommand{\dbltopfraction}{.66}
+\renewcommand{\dblfloatpagefraction}{.66}
+\setcounter{topnumber}{9}
+\setcounter{bottomnumber}{9}
+\setcounter{totalnumber}{20}
+\setcounter{dbltopnumber}{9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% HYPERSETUP 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\hypersetup{ 
+    bookmarks=true,         % show bookmarks bar 
+    unicode=false,          % non-Latin characters in Acrobat's bookmarks 
+    pdftoolbar=true,        % show Acrobat's toolbar 
+    pdfmenubar=true,        % show Acrobat's menu 
+    pdffitwindow=false,     % window fit to page when opened 
+    pdfstartview={FitH},    % fits the width of the page to the window 
+    pdftitle={\TITLE},    % title 
+    pdfauthor={\AUTHOR},     % author 
+    pdfsubject={Subject},   % subject of the document 
+    pdfcreator={Gregor von Laszewski, Fugang Wang},   % creator of the document 
+    pdfproducer={}, % producer of the document 
+    pdfkeywords={hindex} {metric}{XSEDE} {FutureGrid}, % list of keywords 
+    pdfnewwindow=true,      % links in new window 
+    colorlinks=false,       % false: boxed links; true: colored links 
+    linkcolor=red,          % color of internal links (change box color with linkbordercolor) 
+    citecolor=green,        % color of links to bibliography 
+    filecolor=magenta,      % color of file links 
+    urlcolor=cyan           % color of external links 
+} 
+
+\begin{document}
+
+\begin{comment}
+%\conferenceinfo{submitted to XSEDE}{'15,  July 26 - 30 2015, St. Louis, MO, USA}
+\conferenceinfo{submitted to ...}{2015,USA}
+\CopyrightYear{2015} 
+\crdata{TBD...\$15.00.\\
+http://dx.doi.org/TBD
+} 
+\end{comment}
+
+\title{\TITLE\vspace{-12pt}}
+
+
+\author{\IEEEauthorblockN{%
+Gregor von Laszewski,
+Fugang Wang,
+Badi Abduhl Wahid,
+Hyungro Lee,
+Geoffrey C. Fox, }
+\IEEEauthorblockA{%
+$^1$School of Informatics and Computing, Indiana University, Bloomington, Indiana, U.S.A.\\ 
+laszewski@gmail.com}
+}
+
+\maketitle
+
+\begin{abstract}
+
+TBD
+
+\end{abstract}
+
+\begin{comment}
+\vspace{-6pt}
+
+
+\category{H.4}{Information Systems Applications}{Miscellaneous}
+\category{D.2.8}{Software Engineering}{Metrics}[complexity measures,
+performance measures]
+
+\terms{Theory, Measurement}
+
+\keywords{Scientific impact, bibliometric, h-index, Technology Audit
+  Service, XDMoD, XSEDE}
+\end{comment}
+
+\section{Introduction} 
+
+
+
+
+\section{Related Work} \label{S:related}
+
+\section{Design}
+
+\subsection{Requirements}
+
+
+\subsection{Architecture}
+
+
+\begin{comment}
+
+SAMPLE IMAGE
+
+\begin{figure}[htb] 
+  \centering 
+    \includegraphics[width=1.0\columnwidth]{images-new/objectives.pdf} 
+    \caption{High level Objectives impacting the design of our framework}
+    \label{F:objectives}
+\end{figure} 
+
+\end{comment}
+
+\section{Analysis}
+
+\input{client-other}
+
+\input{client}
+
+\section{Conclusion} \label{S:conclusion}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Acknowledgment 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\section{Acknowledgments}
+
+ 
+\bibliographystyle{IEEEtran}
+%\bibliography{% 
+%bib/tas,%
+%bib/vonlaszewski-jabref,%
+%bib/vonlaszewski-new} 
+
+\bibliography{references}
+
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\input{abstract}
+
+\keywords{Virtual machine; Supercomputer;}
+
+
+\input{introduction}
+
+\input{dictionary}
+
+\input{motivation}
+
+\input{architecture}
+
+
+
+\input{results}
+
+\input{conclusion}
+
+\section{Acknowledgments}
+
+Comet is supported by NSF grant: ACI \#1341698 Gateways to Discovery:
+Cyberinfrastructure for the Long Tail of Science. 
+
+\bibliographystyle{abbrvurl}
+\bibliography{references}
+
+
+\end{document}
