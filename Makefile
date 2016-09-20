@@ -1,5 +1,5 @@
-FILE=vonLaszewski-tas
-VIEW=vonLaszewski-tas-cluster-2pages
+FILE=vonLaszewski-vcluster
+VIEW=vonLaszewski-vcluster
 
 #FILE-xsede=vonLaszewski-tas-xsede
 #FILE-cluster=vonLaszewski-tas-cluster
@@ -9,16 +9,6 @@ all:
 	bibtex ${FILE}
 	pdflatex ${FILE}
 	pdflatex ${FILE}
-
-xsede:
-	make -f Makefile FILE=$(FILE)-xsede
-
-two:
-	make -f Makefile FILE=$(FILE)-cluster-2pages
-
-cluster:
-	make -f Makefile FILE=$(FILE)-cluster
-
 
 google:
 	time google docs get --title "${FILE}.tex" ${FILE}.txt
