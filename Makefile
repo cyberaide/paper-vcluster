@@ -4,6 +4,8 @@ VIEW=vonLaszewski-vcluster
 #FILE-xsede=vonLaszewski-tas-xsede
 #FILE-cluster=vonLaszewski-tas-cluster
 
+SKIM=/Applications/Skim.app/Contents/MacOS/Skim
+
 all:
 	pdflatex ${FILE}
 	bibtex ${FILE}
@@ -21,6 +23,9 @@ clean:
 
 view:
 	open ${VIEW}.pdf
+
+skim:
+	${SKIM} ${VIEW}.pdf
 
 # all dependce tracking taking care of by Latexmk
 fast:
